@@ -23,4 +23,17 @@ describe "bubble_sort" do
       expect(bubble_sort(arr)).to eql(expected)
     end
   end
+
+  describe "#swap" do
+    it "swaps two existing elements in an array" do
+      arr = [5, 1, 2, 3, 0, 6]
+      expected = [0, 1, 2, 3, 5, 6]
+      expect(swap(arr, 0, 4)).to eql(expected)
+    end
+    it "returns the same array when swapping an element with itself" do
+      arr = [1, 2, 3]
+      expected = [1, 2, 3]
+      expect(swap(arr, 0, 0)).to eql(expected)
+    end
+  end
 end
